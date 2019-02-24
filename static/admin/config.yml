@@ -1,0 +1,90 @@
+backend:
+  name: git-gateway
+  branch: master
+  accept_roles:
+    - admin
+    - editor
+
+site_url: https://danieldunderfelt.com
+media_folder: static/img
+public_folder: /img
+logo_url: /img/daniel_dunderfelt_logo.png
+
+collections:
+  - name: 'article'
+    label: 'Article'
+    folder: 'src/content/articles'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    preview_path: '/article/{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - {
+        label: 'Template Key',
+        name: 'template',
+        widget: 'hidden',
+        default: 'article',
+      }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - {
+        label: 'Cover image',
+        name: 'media_image',
+        widget: 'image',
+        required: false,
+      }
+      - { label: 'Ingress', name: 'ingress', widget: 'markdown', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Pinned', name: 'pinned', widget: 'number', valueType: "int", default: 0, min: 0, max: 100, required: false }
+  - name: 'message'
+    label: 'Message'
+    folder: 'src/content/messages'
+    create: true
+    slug: '{{slug}}-{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}'
+    preview_path: '/message/{{slug}}-{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}'
+    fields:
+      - {
+        label: 'Template Key',
+        name: 'template',
+        widget: 'hidden',
+        default: 'message',
+      }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - {
+        label: 'Image',
+        name: 'media_image',
+        widget: 'image',
+        required: false,
+      }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Pinned', name: 'pinned', widget: 'number', valueType: "int", default: 0, required: false }
+
+  - name: 'page'
+    label: 'Page'
+    files:
+      - file: 'src/content/about.md'
+        label: 'About'
+        name: 'about'
+        fields:
+          - {
+            label: 'Template Key',
+            name: 'template',
+            widget: 'hidden',
+            default: 'page',
+          }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - file: 'src/content/privacy-policy.md'
+        label: 'Privacy policy'
+        name: 'privacy-policy'
+        fields:
+          - {
+            label: 'Template Key',
+            name: 'template',
+            widget: 'hidden',
+            default: 'page',
+          }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }

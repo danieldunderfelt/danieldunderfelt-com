@@ -1,0 +1,78 @@
+@import 'utils';
+
+.PostsList {
+  margin-top: $margin;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  @include medium {
+    margin-top: $margin * 1.25;
+  }
+
+  > * {
+    margin: 0 0 $margin;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.ListHeading {
+  font-weight: 400;
+  color: $white;
+  margin-top: $margin * 1.25;
+}
+
+.HeadingTag {
+  font-weight: 700;
+  background: lighten($darkGrey, 30%);
+  display: inline-block;
+  padding: 3px 10px 5px;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+  color: white;
+}
+
+.TagList {
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: block;
+  }
+
+  a {
+    margin: 0.75rem 0;
+    border: 1px solid $dividerColor;
+    border-radius: 20px;
+    padding: 0;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    background: $dark;
+
+    &:hover {
+      transform: scale(1.025);
+    }
+  }
+
+  .TagListTag {
+    color: $blue;
+    padding: 0.75rem 1rem;
+    line-height: 1.5;
+  }
+
+  .TagListCount {
+    color: $white;
+    margin-left: auto;
+    font-size: 1.5rem;
+    line-height: 1;
+    border-left: 1px solid $dividerColor;
+    min-width: 4rem;
+    padding: 0.75rem 0;
+    text-align: center;
+  }
+}

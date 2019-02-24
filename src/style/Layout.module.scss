@@ -55,6 +55,14 @@
 .PageContent {
 }
 
+.FooterSkillList {
+  display: block;
+
+  @include multiColumn {
+    display: none;
+  }
+}
+
 .FooterLinkList {
   display: block;
 

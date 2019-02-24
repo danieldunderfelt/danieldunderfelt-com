@@ -54,6 +54,15 @@
   }
 }
 
+.HeaderSkillList {
+  display: none;
+
+  @include multiColumn {
+    display: block;
+    margin-top: $margin * 2;
+  }
+}
+
 .LinkListHeading {
   font-size: 0.875rem;
   color: $blueGrey;
@@ -108,5 +117,44 @@
     display: inline-block;
     margin-right: 0.75rem;
     margin-top: 4px;
+  }
+}
+
+.SkillListContainer {
+  p {
+    text-align: left;
+    font-size: 0.875rem;
+    max-width: 30rem;
+    margin: 1rem 0;
+  }
+}
+
+.SkillList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+
+  @include multiColumn{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  li {
+    font-weight: 700;
+    white-space: nowrap;
+    margin-right: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  img,
+  svg {
+    width: 30px;
+    height: 30px;
+    vertical-align: -4px;
+    margin-right: 0.5rem;
   }
 }

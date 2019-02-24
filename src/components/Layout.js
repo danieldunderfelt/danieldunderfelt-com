@@ -7,6 +7,7 @@ import '../style/index.scss'
 import styles from '../style/Layout.module.scss'
 import LinkList from './LinkList'
 import CookieBanner from './CookieBanner'
+import SkillList from './SkillList'
 
 const TemplateWrapper = ({ children, topSpace = false }) => (
   <StaticQuery
@@ -68,6 +69,7 @@ const TemplateWrapper = ({ children, topSpace = false }) => (
             )}>
             <Header />
             {children}
+            <SkillList className={styles.FooterSkillList} />
             <LinkList className={styles.FooterLinkList} />
             <CookieBanner />
           </div>

@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import logo from '../img/header-logo.png'
 import styles from '../style/Header.module.scss'
 import LinkList from './LinkList'
+import SkillList from './SkillList'
 
 const Header = class extends React.Component {
   render() {
@@ -14,6 +15,7 @@ const Header = class extends React.Component {
               <img src={logo} alt="Very Cool" />
             </h1>
           </Link>
+          <SkillList className={styles.HeaderSkillList} />
           <LinkList className={styles.HeaderLinkList} />
         </div>
       </nav>

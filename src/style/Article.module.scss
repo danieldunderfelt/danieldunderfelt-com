@@ -141,8 +141,9 @@
 .ArticleHeading {
   margin: ($margin / 1.5) 0 1rem;
   color: inherit;
-  font-size: rem(58px);
+  font-size: rem(48px);
   font-weight: 500;
+  letter-spacing: -0.05em;
 }
 
 .PostLink {

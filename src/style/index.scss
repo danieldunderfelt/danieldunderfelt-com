@@ -22,10 +22,12 @@ body {
 }
 
 body {
-  background-image: linear-gradient(
-    to top,
-    darken($dark, 10%),
-    lighten($dark, 7%)
+  background-image: radial-gradient(
+    ellipse at 100% 100%,
+    lighten($dark, 5%) 0%,
+    lighten($dark, 2%) 20%,
+    darken($dark, 2%) 70%,
+    darken($dark, 5%) 100%
   );
   background-position: bottom right;
   background-attachment: fixed;
@@ -37,7 +39,6 @@ img {
 }
 
 a.gatsby-resp-image-link {
-
   &:hover {
     transform: none;
   }

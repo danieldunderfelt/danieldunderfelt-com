@@ -7,7 +7,8 @@
   padding: ($margin - 0.5rem) $margin 0;
   border-radius: 30px;
   overflow: hidden;
-  transition: transform 0.15s ease-out, background 0.2s ease-out, box-shadow 0.1s ease-out;
+  transition: transform 0.15s ease-out, background 0.15s ease-out,
+    box-shadow 0.1s ease-out, border-color 0.1s ease-out;
   border: 1px solid $dividerColor;
   font-size: 101%;
 
@@ -15,6 +16,7 @@
     transform: scale(1.015);
     box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.5);
     background: $dark;
+    border-color: transparent;
   }
 
   .MediaImage {
@@ -28,7 +30,7 @@
   padding: 0.5rem $margin;
   overflow: hidden;
   border-radius: 30px;
-  transition: transform 0.2s ease-out, background 0.2s ease-out,;
+  transition: transform 0.2s ease-out, background 0.2s ease-out;
 
   &:hover {
     transform: translate3d(0, 0, 0) scale(1.01);
@@ -139,8 +141,8 @@
 .ArticleHeading {
   margin: ($margin / 1.5) 0 1rem;
   color: inherit;
-  font-size: rem(48px);
-  font-weight: 400;
+  font-size: rem(58px);
+  font-weight: 500;
 }
 
 .PostLink {
@@ -153,10 +155,10 @@
 }
 
 .PostTags {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Source Code Pro', monospace;
   color: $blue;
-  font-size: rem(16px);
-  font-weight: 300;
+  font-weight: 200;
+  font-size: 0.875rem;
 
   ul {
     display: flex;
@@ -175,7 +177,7 @@
 
     &:after {
       content: '/';
-      font-weight: 300;
+      font-weight: 200;
       margin: 0 0.25rem;
     }
 
@@ -199,7 +201,7 @@
   align-items: center;
   justify-content: flex-start;
   font-size: rem(14px);
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Source Code Pro', monospace;
   font-weight: 400;
 
   @include multiColumn {
@@ -251,6 +253,7 @@
 .PostMeta {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: ($margin / 2) (-$margin) 1rem;
   padding: 0.5rem $margin;
@@ -258,14 +261,21 @@
 
 .MessageMeta {
   border-top: 1px solid $dividerColor;
-  padding-top: 0.75rem;
+  padding-top: 0.5rem;
   border-bottom: 0;
+  padding-bottom: 0;
   margin-bottom: 0;
-  font-size: rem(14px);
   margin-top: 0;
   background: transparent;
 
   .TimeDisplay {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+
+    @include medium {
+      margin-top: 0;
+    }
+
     svg {
       margin-right: 0.5rem;
       width: 0.75rem;
@@ -274,6 +284,13 @@
   }
 
   .PostTags {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+
+    @include medium {
+      margin-top: 0;
+    }
+
     ul {
       margin: 0;
     }
@@ -295,6 +312,10 @@
 .ArticlePage {
   padding-top: 0;
 
+  .MediaImage {
+    margin: 0 0 $margin;
+  }
+
   .PostMeta {
     background: transparent;
     border: 0;
@@ -303,7 +324,6 @@
 
 .ArticleBody {
   color: $textColor;
-  text-align: justify;
   line-height: 1.4;
   letter-spacing: 0.005rem;
   margin: ($margin / 2) 0 $margin * 1.5;
@@ -321,7 +341,6 @@
 
 .ArticleIngress {
   font-size: 1.275rem;
-  font-weight: 300;
 }
 
 .ArticleExcerpt {

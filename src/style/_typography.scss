@@ -1,8 +1,8 @@
 @import 'utils';
 
 html {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 100;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   font-size: $smallFontSize;
   line-height: 1.5;
   color: $textColor;
@@ -28,20 +28,21 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Source Sans Pro', monospace;
   color: $textColor;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: rem(48px);
-  font-weight: 400;
+  font-size: rem(58px);
+  font-weight: 600;
+  font-family: 'Source Code Pro', monospace;
 }
 
 h2 {
-  font-size: rem(36px);
+  font-size: rem(38px);
   font-weight: 400;
+  font-family: 'Source Code Pro', monospace;
 }
 
 h3 {
@@ -66,7 +67,6 @@ h6 {
 
 p {
   color: $textColor;
-  text-align: justify;
   line-height: 1.5;
 
   &:first-child {
@@ -87,7 +87,7 @@ a {
   transition: transform 0.075s ease-out;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.075);
   }
 }
 

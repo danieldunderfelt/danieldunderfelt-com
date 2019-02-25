@@ -1,7 +1,6 @@
 @import 'utils';
 
 .Viewport {
-  max-width: 1920px;
   width: 100%;
 }
 
@@ -23,7 +22,7 @@
     max-width: $containerMaxWidth;
     padding: 0;
     display: grid;
-    grid-template-columns: 1.75fr 3.6fr;
+    grid-template-columns: 2fr 3.5fr;
   }
 
   &.TopSpace {
@@ -36,7 +35,7 @@
 }
 
 .Page {
-  padding: $margin $margin 0;
+  padding: $margin 1rem 0;
   margin-top: $margin;
   margin-bottom: $margin;
   width: calc(100% + 2rem);
@@ -49,6 +48,7 @@
     box-shadow: -1px 1px 6px 0 rgba(0, 10, 50, 0.075);
     margin-top: 0;
     margin-bottom: 0;
+    padding: $margin $margin 0;
   }
 }
 
@@ -63,10 +63,38 @@
   }
 }
 
-.FooterLinkList {
+.FooterLinks {
   display: block;
 
   @include multiColumn {
     display: none;
+  }
+}
+
+.PageList {
+  margin: $margin * 1.25 0 0;
+  padding: $margin * 0.75 0 0;
+  border-top: 1px solid $dividerColor;
+  list-style: none;
+  font-size: 0.875rem;
+  font-weight: 200;
+
+  li {
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    color: $blueGrey;
+  }
+
+  a {
+    color: inherit;
+    display: inline-flex;
+    align-items: flex-start;
+  }
+
+  svg,
+  img {
+    display: inline-block;
+    margin-right: 0.75rem;
+    margin-top: 4px;
   }
 }

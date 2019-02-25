@@ -9,9 +9,7 @@
 
   @include multiColumn {
     justify-content: flex-start;
-    margin-top: 1rem;
-    margin-bottom: 0;
-    margin-left: $margin;
+    margin: 1rem $margin * 2 0 $margin;
     position: relative;
   }
 }
@@ -19,15 +17,16 @@
 .Logo {
   width: rem(250px);
   display: block;
-  margin-bottom: 1rem;
+  margin: 0 auto $margin;
 
   h1 {
     display: inline;
   }
 
   @include multiColumn {
-    width: rem(250px);
+    width: 100%;
     margin-bottom: $margin;
+    margin-left: -1rem;
   }
 
   img {
@@ -38,33 +37,12 @@
 
 .HeaderContent {
   max-width: 100%;
-
-  @include multiColumn {
-    position: fixed;
-    max-width: 240px;
-  }
-}
-
-.HeaderLinkList {
-  display: none;
-
-  @include multiColumn {
-    display: block;
-    margin-top: $margin * 2;
-  }
-}
-
-.HeaderSkillList {
-  display: none;
-
-  @include multiColumn {
-    display: block;
-    margin-top: $margin * 2;
-  }
+  font-weight: 300;
+  font-size: 0.875rem;
 }
 
 .LinkListHeading {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: $blueGrey;
   text-transform: uppercase;
 }
@@ -93,39 +71,19 @@
   }
 }
 
-.PageList {
-  margin: $margin * 1.25 0 0;
-  padding: $margin * 0.75 0 0;
-  border-top: 1px solid $lightGrey;
-  list-style: none;
-  font-size: 0.875rem;
+.HeaderLinkList {
+  display: none;
 
-  li {
-    margin-top: 0.5rem;
-    margin-right: 1rem;
-    color: $blueGrey;
-  }
-
-  a {
-    color: inherit;
-    display: inline-flex;
-    align-items: flex-start;
-  }
-
-  svg,
-  img {
-    display: inline-block;
-    margin-right: 0.75rem;
-    margin-top: 4px;
+  @include multiColumn {
+    display: block;
   }
 }
 
 .SkillListContainer {
   p {
     text-align: left;
-    font-size: 0.875rem;
     max-width: 30rem;
-    margin: 1rem 0;
+    margin: 1rem 0 $margin;
   }
 }
 
@@ -137,17 +95,19 @@
   list-style: none;
   padding: 0;
 
-  @include multiColumn{
+  @include multiColumn {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
   }
 
   li {
-    font-weight: 700;
+    font-weight: 600;
     white-space: nowrap;
     margin-right: 1.5rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.875rem;
+    display: flex;
+    align-items: center;
   }
 
   img,

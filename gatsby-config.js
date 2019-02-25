@@ -24,22 +24,17 @@ module.exports = {
         fonts: [
           {
             family: `Source Code Pro`,
-            variants: ['200', `300`, '400', '500', `600`, `700`],
+            variants: ['200','400', '500', `600`],
           },
           {
             family: `Montserrat`,
             variants: [
-              '100',
               '200',
               `300`,
-              '300i',
               '400',
               '400i',
-              '500',
               `600`,
               `700`,
-              '800',
-              '900',
             ],
           },
         ],

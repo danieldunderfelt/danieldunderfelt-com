@@ -25,7 +25,7 @@ const CookieBanner = () => {
       <div className={styles.BannerContent}>
         <span className={styles.BannerText}>
           You know the drill - we use cookies. One to be exact. That cool? Read
-          more in our <Link to="/privacy-policy">privacy policy</Link>.
+          more in the <Link to="/privacy-policy">privacy policy</Link>.
         </span>
         <button onClick={hideCookieBanner} className={styles.Button}>
           OK

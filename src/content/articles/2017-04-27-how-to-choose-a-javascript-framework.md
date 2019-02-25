@@ -16,7 +16,7 @@ Which one should you go with? Which one is a good time investment to learn? The 
 
 You will not find the name of a single Javascript library or framework in this blogpost, not a single “this is what you should use” recommendation. A new framework, library or pattern drops almost every day, killing the previous solution. If I would name something, this post would be dead within a year.
 
-What you will find, however, is a handful of criteria that you can apply to a solution (const solution = ["framework", "library", "pattern"]).
+What you will find, however, is a handful of criteria that you can apply to a solution `(const solution = ["framework", "library", "pattern"])`.
 
 I should also say that this is geared towards solutions for serious apps that are going into production. In other words, I want to help you be productive with real work. If you are just hacking around and trying stuff out; do try everything!
 

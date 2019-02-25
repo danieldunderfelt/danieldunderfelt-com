@@ -1,10 +1,10 @@
 ---
 template: article
 title: Controlled forms with React
-date: 2018-04-17T15:47:40.582Z
+date: 2018-04-30T15:47:40.582Z
 media_image: /img/controlled_forms.jpg
 ingress: >-
-  The first month of freelancing isn’t really over yet, but I’m long overdue for a blog post anyway. I never promised that these would be regular!
+  We all know about “controlled components”, right? The wonderful invention that almost effortlessly keeps our form inputs in sync with our state. It should come as no surprise that the “controlled component” idea extends to whole forms too and covers them quite nicely.
 tags:
   - dev
   - react
@@ -13,8 +13,6 @@ pinned: 0
 ---
 
 **26.5.2018: I updated this blog post with a solution compatible with React 16.4.**
-
-We all know about “controlled components”, right? The wonderful invention that almost effortlessly keeps our form inputs in sync with our state. It should come as no surprise that the “controlled component” idea extends to whole forms too and covers them quite nicely.
 
 In this blog post I want to show you how I do forms in React. Be warned, I am not going to show you anything revolutionary. Quite the opposite in fact, as I like to keep things simple.
 

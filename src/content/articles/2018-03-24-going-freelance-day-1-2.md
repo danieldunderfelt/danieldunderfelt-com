@@ -2,6 +2,7 @@
 template: article
 title: Going freelance, day 1 and 2
 date: 2018-03-24T15:47:40.582Z
+media_image: /img/current_terminal.png
 ingress: >-
   Days one and two of being a freelance developer.
 tags:
@@ -18,7 +19,11 @@ There’s nothing like a freshly-cleaned MacBook! It almost smells fresh. Everyt
 
 This is the result:
 
-// TODO: add a new pic
+![My current terminal](/img/current_terminal.png "Cool retro term")
+
+> Update 2019-02-25:
+> 
+> This is my current terminal. I'm on Linux and using "Cool Retro Term", at least for a bit!
 
 That is a combination of Hyper, zsh, oh-my-zsh, Sindre Sorhus’ Pure prompt and Hyper-Snazzy theme as well as zsh-syntax-highlighting. I also added the HyperBorder plugin to finalize the look, which added the gradient border around the window.
 

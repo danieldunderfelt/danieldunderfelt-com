@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import classnames from 'classnames'
 import Header from './Header'
 import '../style/index.scss'
-import styles from '../style/Layout.module.scss'
+import * as styles from '../style/Layout.module.scss'
 import CookieBanner from './CookieBanner'
 import FooterLinks from './FooterLinks'
 

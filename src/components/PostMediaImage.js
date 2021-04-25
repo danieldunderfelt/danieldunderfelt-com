@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from '../style/Article.module.scss'
+import * as styles from '../style/Article.module.scss'
 import get from 'lodash/get'
 
 class PostMediaImage extends Component {

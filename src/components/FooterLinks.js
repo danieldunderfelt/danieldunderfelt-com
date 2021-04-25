@@ -1,12 +1,12 @@
 import React from 'react'
-import styles from '../style/Layout.module.scss'
+import { PageList } from '../style/Layout.module.scss'
 import { Link } from 'gatsby'
 import { FiChevronRight } from 'react-icons/fi'
 import classnames from 'classnames'
 
 const FooterLinks = ({ className }) => (
   <div className={classnames(className)}>
-    <ul className={styles.PageList}>
+    <ul className={PageList}>
       <li>
         <Link to="/about">
           <FiChevronRight size="18px" /> About

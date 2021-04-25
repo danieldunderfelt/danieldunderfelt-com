@@ -4,8 +4,8 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import styles from '../style/Article.module.scss'
-import layoutStyles from '../style/Layout.module.scss'
+import * as styles from '../style/Article.module.scss'
+import * as layoutStyles from '../style/Layout.module.scss'
 import TimeDisplay from '../components/TimeDisplay'
 import PostMediaImage from '../components/PostMediaImage'
 import PostTags from '../components/PostTags'
@@ -91,37 +91,33 @@ Article.propTypes = {
 
 export default Article
 
-export const pageQuery = graphql`
-  query ArticleByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      excerpt(pruneLength: 256)
-      longExcerpt: excerpt(pruneLength: 400)
-      html
-      fields {
-        slug
-      }
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        normalDate: date(formatString: "YYYY-MM-DDTHH:mm:ssZZ")
-        title
-        tags
-        ingress
-        media_image {
-          childImageSharp {
-            fixed {
-              width
-              height
-            }
-            fluid {
-              src
-              aspectRatio
-              srcSet
-              sizes
-            }
+export const pageQuery = graphql`query ArticleByID($id: String!) {
+  markdownRemark(id: {eq: $id}) {
+    id
+    excerpt(pruneLength: 256)
+    longExcerpt: excerpt(pruneLength: 400)
+    html
+    fields {
+      slug
+    }
+    frontmatter {
+      date(formatString: "MMMM DD, YYYY")
+      normalDate: date(formatString: "YYYY-MM-DDTHH:mm:ssZZ")
+      title
+      tags
+      ingress
+      media_image {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, layout: FIXED)
+          fluid {
+            src
+            aspectRatio
+            srcSet
+            sizes
           }
         }
       }
     }
   }
+}
 `

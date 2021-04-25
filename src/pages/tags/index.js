@@ -3,7 +3,12 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
-import postsListStyle from '../../style/PostList.module.scss'
+import {
+  ListHeading,
+  TagList,
+  TagListTag,
+  TagListCount,
+} from '../../style/PostList.module.scss'
 import config from '../../../seoConfig'
 
 const TagsPage = ({
@@ -14,17 +19,13 @@ const TagsPage = ({
   <Layout>
     <Helmet title={`Tags | ${config.siteTitle}`} />
     <div>
-      <h3 className={postsListStyle.ListHeading}>Tags</h3>
-      <ul className={postsListStyle.TagList}>
+      <h3 className={ListHeading}>Tags</h3>
+      <ul className={TagList}>
         {group.map(tag => (
           <li key={tag.fieldValue}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              <strong className={postsListStyle.TagListTag}>
-                {tag.fieldValue}
-              </strong>
-              <span className={postsListStyle.TagListCount}>
-                {tag.totalCount}
-              </span>
+              <strong className={TagListTag}>{tag.fieldValue}</strong>
+              <span className={TagListCount}>{tag.totalCount}</span>
             </Link>
           </li>
         ))}

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../img/header-logo.png'
-import styles from '../style/Header.module.scss'
+import * as styles from '../style/Header.module.scss'
 import LinkList from './LinkList'
 import SkillList from './SkillList'
 import FooterLinks from './FooterLinks'

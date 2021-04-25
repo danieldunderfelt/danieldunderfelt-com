@@ -7,7 +7,7 @@ import {
   FaLaravel,
 } from 'react-icons/fa'
 import React from 'react'
-import styles from '../style/Header.module.scss'
+import * as styles from '../style/Header.module.scss'
 import graphQlLogo from "../img/graphql.svg"
 import classnames from "classnames"
 

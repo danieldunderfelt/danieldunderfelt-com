@@ -75,37 +75,33 @@ Message.propTypes = {
 
 export default Message
 
-export const pageQuery = graphql`
-  query MessageByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      excerpt(pruneLength: 256)
-      titleExcerpt: excerpt(pruneLength: 30)
-      longExcerpt: excerpt(pruneLength: 400)
-      html
-      fields {
-        slug
-      }
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        normalDate: date(formatString: "YYYY-MM-DDTHH:mm:ssZZ")
-        title
-        tags
-        media_image {
-          childImageSharp {
-            fixed {
-              width
-              height
-            }
-            fluid {
-              src
-              aspectRatio
-              srcSet
-              sizes
-            }
+export const pageQuery = graphql`query MessageByID($id: String!) {
+  markdownRemark(id: {eq: $id}) {
+    id
+    excerpt(pruneLength: 256)
+    titleExcerpt: excerpt(pruneLength: 30)
+    longExcerpt: excerpt(pruneLength: 400)
+    html
+    fields {
+      slug
+    }
+    frontmatter {
+      date(formatString: "MMMM DD, YYYY")
+      normalDate: date(formatString: "YYYY-MM-DDTHH:mm:ssZZ")
+      title
+      tags
+      media_image {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, layout: FIXED)
+          fluid {
+            src
+            aspectRatio
+            srcSet
+            sizes
           }
         }
       }
     }
   }
+}
 `

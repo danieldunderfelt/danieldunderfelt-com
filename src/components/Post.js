@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
-import articleStyles from '../style/Article.module.scss'
+import * as articleStyles from '../style/Article.module.scss'
 import TimeDisplay from './TimeDisplay'
 import PostMediaImage from './PostMediaImage'
 import { HTMLContent } from './Content'

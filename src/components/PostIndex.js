@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '../style/PostList.module.scss'
+import { PostsList } from '../style/PostList.module.scss'
 import Post from './Post'
 import Message from './Message'
 import { get } from 'lodash'
@@ -64,7 +64,7 @@ class PostIndex extends React.Component {
     const didHighlight = []
 
     return (
-      <section className={style.PostsList}>
+      <section className={PostsList}>
         {sortedPosts.map(({ node: post }) => {
           const template = get(post, 'frontmatter.template', ARTICLE_TEMPLATE)
           const pinned = get(post, 'frontmatter.pinned', 0) || 0
@@ -129,10 +129,7 @@ export const postIndexQuery = graphql`
         ingress
         media_image {
           childImageSharp {
-            fixed {
-              width
-              height
-            }
+            gatsbyImageData(placeholder: BLURRED, layout: FIXED)
             fluid {
               src
               aspectRatio

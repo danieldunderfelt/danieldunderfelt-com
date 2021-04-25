@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react'
-import styles from '../style/Common.module.scss'
+import { BannerContent, BannerText, Button } from '../style/Common.module.scss'
 import { Link } from 'gatsby'
 
 const LOCAL_STORAGE_KEY = '_verycoolCookieBanner'
@@ -21,13 +21,13 @@ const CookieBanner = () => {
   }, [])
 
   return !showCookieBanner ? null : (
-    <div className={styles.CookieBanner}>
-      <div className={styles.BannerContent}>
-        <span className={styles.BannerText}>
+    <div className={CookieBanner}>
+      <div className={BannerContent}>
+        <span className={BannerText}>
           You know the drill - we use cookies. One to be exact. That cool? Read
           more in the <Link to="/privacy-policy">privacy policy</Link>.
         </span>
-        <button onClick={hideCookieBanner} className={styles.Button}>
+        <button onClick={hideCookieBanner} className={Button}>
           OK
         </button>
       </div>

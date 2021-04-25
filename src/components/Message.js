@@ -1,5 +1,5 @@
 import React from 'react'
-import articleStyles from '../style/Article.module.scss'
+import * as articleStyles from '../style/Article.module.scss'
 import TimeDisplay from './TimeDisplay'
 import PostMediaImage from './PostMediaImage'
 import PostTags from './PostTags'

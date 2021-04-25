@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../style/Header.module.scss'
+import * as styles from '../style/Header.module.scss'
 import { FaGithub, FaTwitter } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 

@@ -83,6 +83,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: seoConfig.siteUrlShort,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-svgr',
       options: {
         include: /icons/,

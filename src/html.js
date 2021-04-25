@@ -24,14 +24,6 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-<script async defer data-domain="danieldunderfelt.com" src="https://plausible.io/js/plausible.js"></script>
-            `,
-          }}
-        />
       </body>
     </html>
   )

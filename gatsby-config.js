@@ -23,9 +23,8 @@ module.exports = {
       options: {
         fonts: [
           'source code pro: 200,400,500,600',
-          'montserrat 200,300,400,400i,600,700',
+          'montserrat: 200,300,400,400i,600,700',
         ],
-        display: 'swap',
       },
     },
     'gatsby-plugin-sass',

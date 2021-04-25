@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import {
   HighlightedMessage,
   Post as PostStyle,

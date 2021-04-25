@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ArticleTemplate } from '../../templates/article'
 import { format } from 'date-fns'
+import { ArticleTemplate } from '../../templates/articleTemplate'
 
 const ArticlePreview = ({ entry, widgetFor }) => {
   const post = {

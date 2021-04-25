@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import get from 'lodash/get'
-import SEO from '../components/SEO'
+import Seo from '../components/Seo'
 import Helmet from 'react-helmet'
 import config from '../../seoConfig'
 import { MessageTemplate } from './messageTemplate'
@@ -35,7 +35,7 @@ const Message = ({ data }) => {
             <Helmet>
               <title>{`${title} | ${config.siteTitle}`}</title>
             </Helmet>
-            <SEO post={article} postSEO={true} />
+            <Seo post={article} postSEO={true} />
           </>
         }
       />

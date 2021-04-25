@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import urljoin from 'url-join'
 import config from '../../seoConfig'
 
-class SEO extends Component {
+class Seo extends Component {
   render() {
     const { post, postSEO } = this.props
     let title
@@ -97,4 +97,4 @@ class SEO extends Component {
   }
 }
 
-export default SEO
+export default Seo

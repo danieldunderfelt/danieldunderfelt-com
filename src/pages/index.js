@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
-import PostIndex, { postIndexQuery } from '../components/PostIndex'
-import SEO from '../components/SEO'
+import PostIndex from '../components/PostIndex'
+import Seo from '../components/Seo'
 import config from '../../seoConfig'
 import { hasPinnedMessage, hasPinnedArticle } from '../util/hasPinnedMessage'
 import { get } from 'lodash'
@@ -20,7 +20,7 @@ export default class IndexPage extends React.Component {
     return (
       <Layout topSpace={messagePinned}>
         <Helmet title={config.siteTitle} />
-        <SEO />
+        <Seo />
         <PostIndex
           posts={posts}
           highlightFirst={!articlePinned}

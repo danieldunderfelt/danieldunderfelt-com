@@ -75,8 +75,8 @@ const TemplateWrapper = ({ children, topSpace = false }) => (
             <Header />
             {children}
             <FooterLinks className={styles.FooterLinks} />
-            <CookieBanner />
           </div>
+          <CookieBanner />
         </div>
       </>
     )}

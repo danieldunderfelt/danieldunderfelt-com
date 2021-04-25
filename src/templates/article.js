@@ -3,50 +3,11 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
-import * as styles from '../style/Article.module.scss'
-import * as layoutStyles from '../style/Layout.module.scss'
-import TimeDisplay from '../components/TimeDisplay'
-import PostMediaImage from '../components/PostMediaImage'
-import PostTags from '../components/PostTags'
+import { HTMLContent } from '../components/Content'
 import get from 'lodash/get'
-import SEO from '../components/SEO'
+import Seo from '../components/Seo'
 import config from '../../seoConfig'
-
-export const ArticleTemplate = ({
-  contentComponent,
-  helmet,
-  post,
-  isPreview,
-}) => {
-  const PostContent = contentComponent || Content
-  const {
-    frontmatter: { tags = [], date, title, media_image, ingress = '' },
-    html,
-  } = post
-
-  return (
-    <div className={layoutStyles.Page}>
-      <section className={styles.ArticlePage}>
-        {helmet || ''}
-        <PostTags tags={tags} renderLink={!isPreview} />
-        <h1 className={styles.ArticleHeading}>{title}</h1>
-        <div className={styles.PostMeta}>
-          <TimeDisplay date={date} />
-        </div>
-        <PostMediaImage mediaImage={media_image} description={title} />
-        <PostContent ingress content={ingress} />
-        <PostContent content={html} />
-      </section>
-    </div>
-  )
-}
-
-ArticleTemplate.propTypes = {
-  contentComponent: PropTypes.func,
-  post: PropTypes.object,
-  helmet: PropTypes.object,
-}
+import { ArticleTemplate } from './articleTemplate'
 
 const Article = ({ data }) => {
   const { markdownRemark: post } = data
@@ -75,7 +36,7 @@ const Article = ({ data }) => {
             <Helmet>
               <title>{`${title} | ${config.siteTitle}`}</title>
             </Helmet>
-            <SEO post={article} postSEO={true} />
+            <Seo post={article} postSEO={true} />
           </>
         }
       />

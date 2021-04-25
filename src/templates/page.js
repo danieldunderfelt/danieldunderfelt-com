@@ -2,31 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
-import * as layoutStyles from '../style/Layout.module.scss'
-import * as articleStyles from '../style/Article.module.scss'
-import Helmet from 'react-helmet'
-import config from '../../seoConfig'
-
-export const PageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
-
-  return (
-    <div className={layoutStyles.Page}>
-      <Helmet title={`${title} | ${config.siteTitle}`} />
-      <section className={articleStyles.ArticlePage}>
-        <h1 className={articleStyles.ArticleHeading}>{title}</h1>
-        <PageContent content={content} />
-      </section>
-    </div>
-  )
-}
-
-PageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
+import { HTMLContent } from '../components/Content'
+import { PageTemplate } from './pageTemplate'
 
 const Page = ({ data }) => {
   const { markdownRemark: post } = data

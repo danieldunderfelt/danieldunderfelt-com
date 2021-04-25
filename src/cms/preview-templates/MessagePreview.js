@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { MessageTemplate } from '../../templates/message'
 import { format } from 'date-fns'
 import Content from '../../components/Content'
+import { MessageTemplate } from '../../templates/messageTemplate'
 
 const MessagePreview = ({ entry, widgetFor }) => {
   const post = {

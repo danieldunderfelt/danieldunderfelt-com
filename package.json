@@ -14,14 +14,13 @@
     "gatsby-plugin-netlify": "^3.3.0",
     "gatsby-plugin-netlify-cms": "^5.3.0",
     "gatsby-plugin-nprogress": "^3.3.0",
-    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^4.3.0",
     "gatsby-plugin-sass": "^4.3.0",
     "gatsby-plugin-sharp": "^3.3.1",
     "gatsby-plugin-sitemap": "^3.3.0",
     "gatsby-plugin-svgr": "^3.0.0-beta.0",
-    "gatsby-plugin-twitter": "^2.10.0",
-    "gatsby-remark-copy-linked-files": "^2.10.0",
+    "gatsby-plugin-twitter": "^3.3.0",
+    "gatsby-remark-copy-linked-files": "^4.0.0",
     "gatsby-remark-images": "^5.0.0",
     "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-remark-responsive-iframe": "^3.2.0",
@@ -30,7 +29,7 @@
     "gatsby-transformer-sharp": "^3.3.0",
     "lodash": "^4.17.21",
     "lodash-webpack-plugin": "^0.11.6",
-    "netlify-cms": "^2.10.117",
+    "netlify-cms-app": "^2.14.46",
     "node-sass": "^5.0.0",
     "normalize.css": "^8.0.1",
     "parcel-bundler": "^1.12.5",
@@ -60,5 +59,10 @@
   "devDependencies": {
     "prettier": "^1.16.1",
     "rimraf": "^2.6.2"
+  },
+  "resolutions": {
+    "graphql": "^15.4.0",
+    "graphql-compose": "^7.25.0",
+    "webpack": "^5.24.2"
   }
 }

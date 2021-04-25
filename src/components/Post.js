@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
-import * as articleStyles from '../style/Article.module.scss'
+import { Link, graphql } from 'gatsby'
+import {
+  HighlightedMessage,
+  Post as PostStyle,
+  PostLink,
+  ArticleHeading,
+  PostMeta,
+} from '../style/Article.module.scss'
 import TimeDisplay from './TimeDisplay'
 import PostMediaImage from './PostMediaImage'
 import { HTMLContent } from './Content'
@@ -17,14 +23,11 @@ class Post extends Component {
 
     return (
       <div
-        className={classnames(
-          articleStyles.Post,
-          highlight ? articleStyles.HighlightedPost : ''
-        )}>
+        className={classnames(PostStyle, highlight ? HighlightedMessage : '')}>
         <PostTags tags={tags} />
-        <Link className={articleStyles.PostLink} to={fields.slug}>
-          <h2 className={articleStyles.ArticleHeading}>{title}</h2>
-          <div className={articleStyles.PostMeta}>
+        <Link className={PostLink} to={fields.slug}>
+          <h2 className={ArticleHeading}>{title}</h2>
+          <div className={PostMeta}>
             <TimeDisplay date={date} />
           </div>
           <HTMLContent content={articleIngress} />

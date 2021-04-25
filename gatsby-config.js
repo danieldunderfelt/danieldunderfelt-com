@@ -19,25 +19,13 @@ module.exports = {
     'gatsby-plugin-catch-links',
     `gatsby-plugin-twitter`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Source Code Pro`,
-            variants: ['200','400', '500', `600`],
-          },
-          {
-            family: `Montserrat`,
-            variants: [
-              '200',
-              `300`,
-              '400',
-              '400i',
-              `600`,
-              `700`,
-            ],
-          },
+          'source code pro: 200,400,500,600',
+          'montserrat 200,300,400,400i,600,700',
         ],
+        display: 'swap',
       },
     },
     'gatsby-plugin-sass',
@@ -70,19 +58,14 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads',
-            },
-          },
+          `gatsby-remark-relative-images`,
           {
             resolve: 'gatsby-remark-images',
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 2048,
+              maxWidth: 1024,
             },
           },
           {

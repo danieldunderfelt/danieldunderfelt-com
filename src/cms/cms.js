@@ -1,4 +1,4 @@
-import CMS from 'netlify-cms'
+import CMS from 'netlify-cms-app'
 
 import ArticlePreview from './preview-templates/ArticlePreview'
 import MessagePreview from './preview-templates/MessagePreview'
